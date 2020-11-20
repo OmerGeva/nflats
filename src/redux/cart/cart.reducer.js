@@ -1,5 +1,5 @@
 import { cartActionTypes } from './cart.types';
-import { removeItemFromCart,addItemToCart, calculateTotalPrice, calculateItemCount} from './cart.utils'
+import { removeItemFromCart,addItemToCart, calculateTotalPrice} from './cart.utils'
 
 
 const INITIAL_STATE = {
@@ -21,7 +21,7 @@ const INITIAL_STATE = {
         return {
           ...state,
           cartItems: removeItemFromCart(state.cartItems, action.payload),
-          itemCount: state.itemCount - action.payload.quantity,
+          itemCount: state.itemCount - (state.cartItems.filter(item => item.title === action.payload.title) ? state.cartItems.filter(item => item.title === action.payload.title)[0].quantity : 1),
           totalPrice: calculateTotalPrice(state.cartItems, action.payload, true)
         }
       default:

@@ -8,13 +8,13 @@ export const PackageContainer = styled.div`
     0 8px 16px rgba(0,0,0,0.11);
     border: .5px solid #FFFAFA;
     border-radius: 4px;
-    width: 400px;
+    width: 30%;
     min-height: 45vh;
     margin: 8px;
     text-align: center;
     display: flex;
     flex-direction: column;
-  
+    text-align:center;
     h3{
         margin: 5% auto;
         padding: 8px;

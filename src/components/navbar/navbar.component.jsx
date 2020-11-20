@@ -29,7 +29,7 @@ const NavigationBar = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
             <span className='mr-auto'></span>
             <Nav>
-            <Link to='/packages' className='navbar-link-text mr-4'>Packages</Link>
+            <Link to='/packages' className='navbar-link-text mr-4'>Buy Premium Picks</Link>
             <Link to='/checkout' className='navbar-link-text mr-4'>Cart ( {itemCount} )</Link> 
 
             </Nav>

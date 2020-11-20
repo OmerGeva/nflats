@@ -13,18 +13,43 @@ const CheckoutTotal = () => {
     const handleShow = () => setShow(true);
     const numberOfItems = useSelector(state => state.cart.itemCount);
     const totalPrice = useSelector(state => state.cart.totalPrice);
-    const cart = useSelector(state => state.cart.totalPrice);
+    const cart = useSelector(state => state.cart.cartItems);
     // For modal
-
+    const getPrice = item => {
+        console.log(item);
+        let priceID = '';
+        switch(item.title) {
+            case 'Singular Daily Pick':
+                priceID = process.env.REACT_APP_DAILY_PICK
+              break;
+            case 'NFL ATS All Access Subscription':
+                priceID = process.env.REACT_APP_ALL_ACCESS
+                break;
+            case 'Weekly Best Bets':
+                priceID = process.env.REACT_APP_BI_ACCESS
+                break;
+            case 'Bi-Weekly NFL ATS All Access Subscription':
+                priceID = process.env.REACT_APP_WEEK_BETS
+                break;
+            default:
+                priceID = process.env.REACT_APP_FULL_SEASON
+          }
+        return priceID;
+    }
     const handleClick = async (event) => {
+        const stripeCheckoutLineItems = cart.map(item => {
+
+            return {
+                quantity: item.quantity,
+                price: getPrice(item)
+            }
+        })
+        console.log(stripeCheckoutLineItems);
         // Get Stripe.js instance
         const stripe = await stripePromise;
         stripe
         .redirectToCheckout({
-            lineItems: [
-            // Replace with the ID of your price
-            {price: 'price_1Hn97kB4yRy9h1Uj6V8cWNiR', quantity: 1},
-            ],
+            lineItems: stripeCheckoutLineItems,
             mode: 'payment',
             successUrl: 'https://nflats.net/',
             cancelUrl: 'https://nflats.net/',

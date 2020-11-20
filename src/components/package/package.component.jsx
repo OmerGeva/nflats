@@ -13,13 +13,13 @@ const Package = ({title, price, description, removeItem, quantity}) => {
     const packageType = () => {
         const packageIcon = [];
         switch (title) {
-            case 'Daily Pick':
+            case 'Singular Daily Pick':
                 return <MdToday />;
-            case 'Full Slate of Picks':
+            case 'NFL ATS All Access Subscription':
                 return <GiTakeMyMoney />;
-            case 'Best Bets Only':
+            case 'Weekly Best Bets':
                 return <RiMoneyDollarCircleFill />;
-            case 'Bi-Weekly Package':
+            case 'Bi-Weekly NFL ATS All Access Subscription':
                 return <GiMoneyStack />;
             default:
                 return <ImCalendar />;
