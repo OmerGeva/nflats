@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'airAmerica';
+  src: local('airAmerica'), url(./fonts/AirAmerica-Regular.otf) format('truetype');
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App{
   background-color: #282c34;
   min-height: 100vh;
+  width: 100vw;
+  color: white;
+  font-family: 'airAmerica';
+  font-size: 18px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.flex-grower{
+  flex-grow: 1;
+}
+ a{
   color: white;
-}
+  opacity: 1;
 
-.App-link {
-  color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a:hover{
+  opacity: 0.7;
 }
