@@ -16,7 +16,6 @@ const CheckoutTotal = () => {
     const cart = useSelector(state => state.cart.cartItems);
     // For modal
     const getPrice = item => {
-        console.log(item);
         let priceID = '';
         switch(item.title) {
             case 'Singular Daily Pick':
@@ -44,7 +43,6 @@ const CheckoutTotal = () => {
                 price: getPrice(item)
             }
         })
-        console.log(stripeCheckoutLineItems);
         // Get Stripe.js instance
         const stripe = await stripePromise;
         stripe
