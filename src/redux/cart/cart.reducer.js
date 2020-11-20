@@ -21,7 +21,7 @@ const INITIAL_STATE = {
         return {
           ...state,
           cartItems: removeItemFromCart(state.cartItems, action.payload),
-          itemCount: state.itemCount - 1,
+          itemCount: 0,
           totalPrice: calculateTotalPrice(state.cartItems, action.payload, true)
         }
       default:
