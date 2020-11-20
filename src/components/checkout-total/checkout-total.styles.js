@@ -59,6 +59,8 @@ p{
 }
 
 @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin: 2vh 0;
     .priceAndDescription{
         display: block;
         text-align: center;
@@ -67,5 +69,6 @@ p{
             text-align: center;
         }
     }
+
 }
 `

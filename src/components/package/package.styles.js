@@ -61,6 +61,7 @@ export const PackageContainer = styled.div`
     }
     
     @media only screen and (max-width: 768px) {
+        margin: 2vh auto;
         width: 95%;
         .priceAndDescription{
             display: block;
