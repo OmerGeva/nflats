@@ -17,7 +17,6 @@ function App() {
                 <Route path='/checkout' component={CheckOutPage}/>
                 <Route exact path={`/terms`} render={(props) => <InfoPage isTermsPage/>} />
                 <Route path='/privacy' component={InfoPage} />
-
                 <Route render={() => <Redirect to="/" />} />
         </Switch>
         <span className='flex-grower'></span>
