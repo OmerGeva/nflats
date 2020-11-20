@@ -7,7 +7,7 @@ import {loadStripe} from '@stripe/stripe-js';
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const CheckoutTotal = () => {
-    // For modal
+    // For modal 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
