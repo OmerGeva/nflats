@@ -42,9 +42,8 @@ const CheckoutTotal = () => {
         })
         // Get Stripe.js instance
         const stripe = await stripePromise;
-        stripe
-        .redirectToCheckout({
-            lineItems: stripeCheckoutLineItems,
+        stripe.redirectToCheckout({
+            lineItems: [stripeCheckoutLineItems],
             mode: 'payment',
             successUrl: 'https://nflats.net/',
             cancelUrl: 'https://nflats.net/',
