@@ -8,9 +8,6 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const CheckoutTotal = () => {
     // For modal 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
     const numberOfItems = useSelector(state => state.cart.itemCount);
     const totalPrice = useSelector(state => state.cart.totalPrice);
     const cart = useSelector(state => state.cart.cartItems);
