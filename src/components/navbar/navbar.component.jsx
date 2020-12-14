@@ -30,6 +30,7 @@ const NavigationBar = () => {
             <span className='mr-auto'></span>
             <Nav>
             <Link to='/packages' className='navbar-link-text mr-4'>Buy Premium Picks</Link>
+            <Link to='/contact' className='navbar-link-text mr-4'>Contact Us</Link>
             <Link to='/checkout' className='navbar-link-text mr-4'>Cart ( {itemCount} )</Link> 
 
             </Nav>
@@ -45,26 +46,3 @@ const NavigationBar = () => {
 
 
 export default NavigationBar;
-{/* <NavbarContainer >
-<div className='desktopNavbar'>
-    <Link to='/'>
-      <div className='logoHome'>
-          <Image src='logo.png' />
-      </div>
-    </Link>
-  <div className='menuOptions'>
-    <Link to='/packages'>
-      <p >Packages</p>
-    </Link>
-    <Link to='/about'>
-      <p >About</p>
-    </Link>
-    <Link to='/purchase'>
-      <p >Cart ( {itemCount} )</p>
-    </Link>
-    <Link to='/contact'>
-      <p >Contact</p>
-    </Link>
-  </div>
-</div>
-</NavbarContainer> */}

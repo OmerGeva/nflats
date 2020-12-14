@@ -4,6 +4,7 @@ import Footer from './components/footer/footer.component'
 import { Switch, Route, Redirect } from 'react-router-dom';
 import HomePage from './pages/home/home.component';
 import CheckOutPage from './pages/check-out/check-out.component';
+import ContactPage from './pages/contact/contact.component';
 import PackagesPage from './pages/packages/packages.component';
 import InfoPage from './pages/info-page/info-page.component'
 
@@ -15,6 +16,7 @@ function App() {
                 <Route exact path='/' component={HomePage}/>
                 <Route path='/packages' component={PackagesPage}/>
                 <Route path='/checkout' component={CheckOutPage}/>
+                <Route path='/contact' component={ContactPage}/>
                 <Route exact path={`/terms`} render={(props) => <InfoPage isTermsPage/>} />
                 <Route path='/privacy' component={InfoPage} />
                 <Route render={() => <Redirect to="/" />} />
